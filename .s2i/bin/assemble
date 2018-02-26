@@ -1,0 +1,2 @@
+cp -R /tmp/src /opt/app-root/
+cd /opt/app-root/src && gradle build
