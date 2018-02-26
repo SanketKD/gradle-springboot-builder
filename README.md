@@ -10,6 +10,7 @@ Use this image for deploying Springboot Applications which use Gradle as build t
   
 Check this [Sample](https://github.com/SanketKD/openshift-spring-boot-gradle.git "openshift-spring-boot-gradle") Springboot Applications which use Gradle as build tool.
 
+[Docker Image](https://hub.docker.com/r/sanketkd/gradle-springboot-builder/ "Docker Hub") : sanketkd/gradle-springboot-builder:1
 
 	oc new-app sanketkd/gradle-springboot-builder:1~<your-git-repository-url>#<branch-name>
 
