@@ -5,12 +5,13 @@ echo "---->>>> Building application with Gradle"
 gradle build
 
 ARTIFACT_DIR=${ARTIFACT_DIR:-build/libs}
+APP_JAR=${APP_JAR:-app.jar}
 
-echo "--> # ARTIFACT_DIR = $ARTIFACT_DIR"
-echo "---> Rename artifact $(find $ARTIFACT_DIR -name *.jar)"
+echo "---->>>> Rename artifact $(find $ARTIFACT_DIR -name *.jar) to $APP_JAR"
 result_file=$(find $ARTIFACT_DIR -name *.jar)
 if [ -z "$result_file" ]; then
-  echo "---> Build file could not be found"
+  echo "---->>>> Build file could not be found"
   exit 1
 fi
 mv $result_file app.jar
+echo "---->>>> Build Successful"
